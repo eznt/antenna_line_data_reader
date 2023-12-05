@@ -1,0 +1,43 @@
+8.8.2023
+
+Antenna_line_data_analyzer
+Required python libraries: pandas, plotly, tkinter, numpy, openpyxl
+
+pip install pandas plotly tkinter numpy openpyxl
+
+Supports raw csv files from BTS AND csv files converted to excel (xlsx) files via "Text to columns" method
+Do not modify csv files manually, after modification the files might not work
+
+Using the input fields:
+Write a number in input field to specify the amount of files to be used. If left empty, only one is used.
+
+Radios and their antennas can be filtered in own input fields. If fields left empty, all radios and antennas are used.
+
+Comma is the separator for different radios to be included in the graph e.g. input "1,2" will use radios 1 and 2
+
+Comma is also separator for different antennas in a given radio, and semicolon (;) specifies from which radios the specified antennas are to be used.
+
+EXAMPLE: radio input is '1,2':
+For all antennas from all radios, use input: '' or ';'. 
+
+If you want: antennas 1,2 from radio 1,
+			 and antennas 3, 4 from radio 2,
+			 -> input '1,2;3,4'
+
+If you want: antenna 1 from radio 1,
+			 all antennas for radio 2
+			 -> input '1;' or '1'
+
+
+EXAMPLE: radio input '1,3,4':
+For all antennas from all radios, use input: '' or ';' or ';;'
+
+If you want: all antennas from radio 1, 
+			 antennas 1,3 from radio 3,
+			 antenna 4 from radio 4
+			 -> use input ';1,3;4'
+			 
+If you want: antenna 3 from radio 1,
+			 all antennas for radio 3,
+			 antenna 2 from radio 4
+			 -> use input '3;;2'
